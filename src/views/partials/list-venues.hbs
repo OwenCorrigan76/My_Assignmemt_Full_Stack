@@ -1,0 +1,26 @@
+{{#each venues}}
+  <div class="box box-link-hover-shadow">
+    <h2>
+      Detail Name:
+      {{title}}
+      <br />
+      Detail Type:
+      {{vtype}}
+      <br />
+      <br />
+    </h2>
+    <a href="/venue/{{_id}}" class="button">
+      <span class="icon is-small">
+        <i class="fas fa-folder-open"></i>
+      </span>
+      <span> More Info</span>
+    </a>
+    <a href="/dashboard/deletevenue/{{_id}}" class="button">
+      <span class="icon is-small">
+        <i class="fas fa-trash"></i>
+      </span>
+      <span> Delete </span>
+    </a>
+  </div>
+  <br />
+{{/each}}

@@ -1,0 +1,19 @@
+{
+  "venues": [
+    {
+      "title": "Indoor Detail",
+      "userid": "622f84743c397871dfc5ceff",
+      "_id": "31151276-73aa-41ef-b80f-55295e560690"
+    },
+    {
+      "title": "Outdoor Detail",
+      "userid": "622f84743c397871dfc5ceff",
+      "_id": "df30f6e4-c57a-4cf3-9e9a-57a9d89872ec"
+    },
+    {
+      "title": "Hybrid Detail",
+      "userid": "622f84743c397871dfc5ceff",
+      "_id": "119c1345-bc6d-44ea-9a76-745d77dad513"
+    }
+  ]
+}

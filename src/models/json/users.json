@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "_id": "21febc35-88fb-4ae1-937d-8507f4fbb0ad"
+    },
+    {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "_id": "f040d29e-4b00-41e6-b52f-f30c4e8989b4"
+    },
+    {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "_id": "0b38ec3f-79d6-4d86-9051-cf152b041a1b"
+    },
+    {
+      "firstName": "owen",
+      "lastName": "Corrigan",
+      "email": "owenlkhjerz@gmail.com",
+      "password": "lljm",
+      "_id": "537aa217-dd62-4a89-8447-9f428bab3c3e"
+    },
+    {
+      "firstName": "owen",
+      "lastName": "Corrigan",
+      "email": "homer@simpsoddcdn.com",
+      "password": " cccc",
+      "_id": "2254651b-f37e-4abb-a467-1eeccb526275"
+    },
+    {
+      "firstName": "owen",
+      "lastName": "Corrigan",
+      "email": "owenlknlkjnerz@gmail.com",
+      "password": "m,nmkkm",
+      "_id": "010e0025-2863-4968-b30e-e6fca99a817e"
+    },
+    {
+      "firstName": "owen",
+      "lastName": "Corrigan",
+      "email": "homzzzzzer@simpson.com",
+      "password": "zzzzz",
+      "_id": "015cc85e-28b8-454b-9545-9727c3fa55c6"
+    },
+    {
+      "firstName": "owen",
+      "lastName": "Corrigan",
+      "email": "hosssssmer@simpson.com",
+      "password": "ssssss",
+      "_id": "a1b079bb-fe84-4dce-b3f0-0e75b0819e95"
+    },
+    {
+      "firstName": "owen",
+      "lastName": "Corrigan",
+      "email": "homsser@simpson.com",
+      "password": "sss",
+      "_id": "cddd951c-004a-4e30-9434-4c39e1b13c00"
+    }
+  ]
+}
