@@ -1,11 +1,33 @@
-<form action="dashboard/addvenue" method="POST">
-  <label for="venue">Detail Type</label>
-  <select name="venue">
-    <option value="Indoor">Indoor</option>
-    <option value="Outdoor">Outdoor</option>
-    <option value="Hybrid">Hybrid</option>
-  </select>
-  <input type="text" name="title" placeholder="Enter Detail Name" />
-  <textarea name="description" placeholder="Add Detail Description"></textarea>
-  <input type="submit" value="submit" />
+<section>
+    <label for="venue">Select Type of Venue in drop-down list and add details: </label>
+</section>
+
+<form action="/dashboard/addvenue" method="POST">
+    <style>
+        .drop{ padding: 0.5em; border: 2px solid transparent; }
+    </style>
+
+    <label>
+        <select class="drop" name="venue">
+            <option value="Indoor">Indoor</option>
+            <option value="Outdoor">Outdoor</option>
+            <option value="Hybrid">Hybrid</option>
+        </select>
+    </label>
+    <style>
+    </style>
+    <label>
+        <input class="button" type="text" name="title" placeholder="Enter Venue Name" />
+    </label>
+    <button class="button">Submit</button>
+
+    <title>Custom Text Area</title>
+    <style>
+        .textarea{ background-color: #e7eee9; padding: 1em; border-radius: 20px; border: 4px solid transparent; outline: none; }
+    </style>
+    <label>
+        <textarea class="textarea" name="description" placeholder="Add Venue Description"></textarea>
+    </label>
+    <div class="field is-grouped">
+    </div>
 </form>

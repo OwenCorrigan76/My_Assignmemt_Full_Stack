@@ -1,11 +1,11 @@
 import Boom from "@hapi/boom";
-import { VenueSpec } from "../models/joi-schemas.js";
+import {IdSpec, VenueSpec, VenueSpecPlus, VenueArraySpec } from "../models/joi-schemas.js";
 import { db } from "../models/db.js";
+import { validationError } from "./logger.js";
 
 export const venueApi = {
     find: {
-        auth: false,
-        handler: async function (request, h) {
+       handler: async function (request, h) {
             try {
                 const venues = await db.venueStore.getAllVenues();
                 return venues;
@@ -13,6 +13,10 @@ export const venueApi = {
                 return Boom.serverUnavailable("Database Error");
             }
         },
+        tags: ["api"],
+        response: { schema: VenueArraySpec, failAction: validationError },
+        description: "Get all Venues",
+        notes: "Returns all Venues",
     },
 
     findOne: {
@@ -28,6 +32,11 @@ export const venueApi = {
                 return Boom.serverUnavailable("No Venue with this id");
             }
         },
+        tags: ["api"],
+        description: "Find a Venue",
+        notes: "Returns a venue",
+        validate: { params: { id: IdSpec }, failAction: validationError },
+        response: { schema: VenueSpecPlus, failAction: validationError },
     },
 
     create: {
@@ -44,6 +53,12 @@ export const venueApi = {
                 return Boom.serverUnavailable("Database Error");
             }
         },
+        tags: ["api"],
+        description: "Create a Venue",
+        notes: "Returns the newly created venue",
+        validate: { payload: VenueSpec, failAction: validationError },
+       // response: { schema: VenueSpecPlus, failAction: validationError  },
+
     },
 
     deleteOne: {
@@ -60,6 +75,9 @@ export const venueApi = {
                 return Boom.serverUnavailable("No Venue with this id");
             }
         },
+        tags: ["api"],
+        description: "Delete a venue",
+        validate: { params: { id: IdSpec }, failAction: validationError },
     },
 
     deleteAll: {
@@ -73,4 +91,6 @@ export const venueApi = {
             }
         },
     },
+    tags: ["api"],
+    description: "Delete all Venues",
 };
