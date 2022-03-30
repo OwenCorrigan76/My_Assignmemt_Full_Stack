@@ -26,7 +26,7 @@ export const VenueSpec = Joi.object()
     .keys({
         title: Joi.string().required().example("Smyths"),
         vtype: Joi.string().required().example("Lovely"),
-        description: Joi.string().required().example("Lovely"),
+        description: Joi.string().required().example("Music"),
 
         userid: IdSpec,
     })
