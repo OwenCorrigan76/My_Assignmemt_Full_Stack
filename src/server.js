@@ -1,13 +1,16 @@
+import Inert from "@hapi/inert";
 import Vision from "@hapi/vision";
 import Hapi from "@hapi/hapi";
 import Cookie from "@hapi/cookie";
+
 import Joi from "joi";
 import HapiSwagger from "hapi-swagger";
 import path from "path";
 import jwt from "hapi-auth-jwt2";
+
 import {fileURLToPath} from "url";
 import Handlebars from "handlebars";
-import Inert from "@hapi/inert";
+
 import dotenv from "dotenv";
 import { validate } from "./api/jwt-utils.js";
 import {apiRoutes} from "./api-routes.js";
@@ -24,10 +27,11 @@ const swaggerOptions = {
         version: "0.1",
     },
 };
+
 const result = dotenv.config();
 if (result.error) {
     console.log(result.error.message);
-   // process.exit(1);
+    process.exit(1);
 }
 
 async function init() {
@@ -36,8 +40,8 @@ async function init() {
     });
 
     await server.register(Vision);
-    await server.register(Cookie);
     await server.register(Inert);
+    await server.register(Cookie);
     await server.register(jwt);
 
     server.validator(Joi);
@@ -75,7 +79,7 @@ async function init() {
             password: process.env.cookie_password,
             isSecure: false,
         },
-        redirectTo: "/", // back to login
+        redirectTo: "/",
         validateFunc: accountsController.validate,
     });
     server.auth.default("session");

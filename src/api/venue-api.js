@@ -14,7 +14,7 @@ export const venueApi = {
             }
         },
         tags: ["api"],
-        response: { schema: VenueArraySpec, failAction: validationError },
+      //  response: { schema: VenueArraySpec, failAction: validationError },
         description: "Get all Venues",
         notes: "Returns all Venues",
     },
@@ -35,8 +35,8 @@ export const venueApi = {
         tags: ["api"],
         description: "Find a Venue",
         notes: "Returns a venue",
-        validate: { params: { id: IdSpec }, failAction: validationError },
-        response: { schema: VenueSpecPlus, failAction: validationError },
+       // validate: { params: { id: IdSpec }, failAction: validationError },
+        // response: { schema: VenueSpecPlus, failAction: validationError },
     },
 
     create: {
@@ -56,7 +56,7 @@ export const venueApi = {
         tags: ["api"],
         description: "Create a Venue",
         notes: "Returns the newly created venue",
-        validate: { payload: VenueSpec, failAction: validationError },
+       // validate: { payload: VenueSpec, failAction: validationError },
        // response: { schema: VenueSpecPlus, failAction: validationError  }, // fix this issue
 
     },
@@ -77,7 +77,7 @@ export const venueApi = {
         },
         tags: ["api"],
         description: "Delete a venue",
-        validate: { params: { id: IdSpec }, failAction: validationError },
+       //  validate: { params: { id: IdSpec }, failAction: validationError },
     },
 
     deleteAll: {

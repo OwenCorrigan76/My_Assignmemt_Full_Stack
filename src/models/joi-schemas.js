@@ -25,6 +25,9 @@ export const UserArray = Joi.array().items(UserSpecPlus).label("UserArray");
 export const VenueSpec = Joi.object()
     .keys({
         title: Joi.string().required().example("Smyths"),
+        vtype: Joi.string().required().example("Lovely"),
+        description: Joi.string().required().example("Lovely"),
+
         userid: IdSpec,
     })
     .label("Venue");

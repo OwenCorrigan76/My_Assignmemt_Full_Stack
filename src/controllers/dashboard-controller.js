@@ -6,7 +6,7 @@ export const dashboardController = {
       const loggedInUser = request.auth.credentials;
       const venues = await db.venueStore.getUserVenues(loggedInUser._id);
       const viewData = {
-        title: "Detail Dashboard",
+        title: "Venue Dashboard",
         user: loggedInUser,  // from signup / login
         venues: venues,
       };
