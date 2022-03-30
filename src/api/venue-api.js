@@ -57,7 +57,7 @@ export const venueApi = {
         description: "Create a Venue",
         notes: "Returns the newly created venue",
         validate: { payload: VenueSpec, failAction: validationError },
-       // response: { schema: VenueSpecPlus, failAction: validationError  },
+       response: { schema: VenueSpecPlus, failAction: validationError  },
 
     },
 
